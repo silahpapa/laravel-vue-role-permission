@@ -164,7 +164,7 @@ class MakeModelAndMigration extends Command
     public function getFieldType($field_name){
         $textareas = ['description','answer','more_information','reason','email_message','sms_message','html',
             'comment',"testimonial",'about','address','postal_address','message','invoice_footer',
-            'security_credential','reason_rejected','note','instructions'];
+            'security_credential','any','reason_rejected','note','instructions'];
         $enum = ['state'];
         if (in_array($field_name,$enum))
             return 'enum';
