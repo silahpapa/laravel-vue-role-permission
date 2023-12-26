@@ -239,6 +239,7 @@ class MakeModelAndMigration extends Command
         Artisan::call("make:seeder",[
             'name'=>$seeder_name
         ]);
+        //here we are going to update the seeder file
         $seed_path = database_path($path);
         $seed_content = file_get_contents($seed_path);
         $seed_array = explode('//',$seed_content);
